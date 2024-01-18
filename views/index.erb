@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>チェックワーク</title>
+</head>
+<body>
+  <form action="/new" method="post">
+    <input type="text" name="name" placeholder="名前">
+    <select name="course">
+      <option value="Webサービスコース">Webサービスコース</option>
+      <option value="Webデザインコース">Webデザインコース</option>
+      <option value="iPhoneコース">iPhoneコース</option>
+      <option value="映像制作コース">映像制作コース</option>
+      <option value="Unityコース">Unityコース</option>
+    </select>
+    <input type="number" name="age" placeholder="年齢">
+    <input type="submit" value="作成">
+  </form>
+  <form action="/category" method="post">
+    <input type="text" name="name" placeholder="名前">
+    <select name="course">
+      <option>----</option>
+      <option value="Webサービスコース">Webサービスコース</option>
+      <option value="Webデザインコース">Webデザインコース</option>
+      <option value="iPhoneコース">iPhoneコース</option>
+      <option value="映像制作コース">映像制作コース</option>
+      <option value="Unityコース">Unityコース</option>
+    </select>
+    <input type="number" name="age" placeholder="年齢">
+    <input type="submit" value="検索">
+  </form>
+  <% @members.each do |member| %>
+    <div>
+      <%= member.name %>
+      <%= member.course %>
+      <%= member.age %>歳
+    </div>
+  <% end %>
+</body>
+</html>

@@ -1,0 +1,10 @@
+default_env: &default
+  adapter: postgresql
+  encoding: unicode
+  database: s_checkwork_database_answer
+
+development:
+  <<: *default
+
+production:
+  <<: *default
